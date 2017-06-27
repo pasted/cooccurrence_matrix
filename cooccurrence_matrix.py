@@ -3,7 +3,7 @@ import csv
 import pandas as pd
 import numpy as np
 
-class CooccurenceMatrix():
+class CooccurrenceMatrix():
 
     def read_matrix(csv_file):
         df = pd.read_csv(csv_file)
@@ -62,7 +62,7 @@ if __name__ == '__main__':
    parser.add_argument('product_id', help='Valid product id to construct co-occurence against')
    args = parser.parse_args()
 
-   matrix = CooccurenceMatrix
+   matrix = CooccurrenceMatrix
    this_dataframe = matrix.read_matrix(args.input_file)
    unique_product_ids = matrix.gather_product_ids(this_dataframe)
    df_results = matrix.generate_empty_dataframe(unique_product_ids)
